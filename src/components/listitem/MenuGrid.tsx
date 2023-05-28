@@ -28,7 +28,7 @@ const MenuGrid = ({ data }: Props) => {
         <span className="ml-2 text-lg">{NumberFormat(data.price)}.000đ</span>
       </div>
       <div className="text-lg">
-        {data.description} / Conc: {data.level}
+        {data.description} {data.level > 0 ? ` / Conc: ${data.level}` : ''}
       </div>
     </div>
   );

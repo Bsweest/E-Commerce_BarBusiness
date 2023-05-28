@@ -119,14 +119,6 @@ export const BartenderItem: ItemData[] = [
     type: 2,
   },
   {
-    id: 13,
-    name: 'Bình Shaker',
-    price: 200,
-    description: 'Hi',
-    url: '/asset/tools/jigger.jpg',
-    type: 2,
-  },
-  {
     id: 14,
     name: 'Muỗng Pha Chế',
     price: 200,
