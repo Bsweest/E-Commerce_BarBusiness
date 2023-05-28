@@ -154,7 +154,7 @@ export const BartenderItem: ItemData[] = [
 
 export const AllShopItem = WineItem.concat(BartenderItem);
 
-type MenuItem = {
+export type MenuItem = {
   id: number;
   grid: number;
   name: string;
@@ -275,6 +275,22 @@ export const Table: ItemData[] = [
     price: 200,
     url: '',
     name: 'Bàn 1',
-    description: '',
+    description: '/asset/table.jpg',
+  },
+  {
+    id: -2,
+    type: 3,
+    price: 150,
+    url: '',
+    name: 'Bàn 2',
+    description: '/asset/table.jpg',
+  },
+  {
+    id: -3,
+    type: 3,
+    price: 300,
+    url: '',
+    name: 'Bàn 3',
+    description: '/asset/table.jpg',
   },
 ];

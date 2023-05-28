@@ -1,3 +1,4 @@
+import MenuGrid from '@/components/listitem/MenuGrid';
 import MainLayout from '@/layouts/MainLayout';
 import { DrinkMenu, FoodMenu } from '@/placeholder_data';
 import NumberFormat from '@/utils/PriceFormat';
@@ -27,20 +28,7 @@ const Menu: NextPageWithLayout = () => {
 
             <div className="grid grid-cols-12 font-advent">
               {DrinkMenu.map((item) => (
-                <div
-                  key={item.id}
-                  className={`col-span-${item.grid} my-5 flex flex-col items-center text-3xl text-orange-200`}
-                >
-                  <div className="items-end">
-                    {item.name}
-                    <span className="ml-2 text-lg">
-                      {NumberFormat(item.price)}.000đ
-                    </span>
-                  </div>
-                  <div className="text-lg">
-                    {item.description} / Conc: {item.level}
-                  </div>
-                </div>
+                <MenuGrid key={item.id} data={item} />
               ))}
             </div>
 
@@ -50,18 +38,7 @@ const Menu: NextPageWithLayout = () => {
 
             <div className="grid grid-cols-12 font-advent">
               {FoodMenu.map((item) => (
-                <div
-                  key={item.id}
-                  className={`col-span-${item.grid} my-5 flex flex-col items-center text-3xl text-orange-200`}
-                >
-                  <div className="items-end">
-                    {item.name}
-                    <span className="ml-2 text-lg">
-                      {NumberFormat(item.price)}.000đ
-                    </span>
-                  </div>
-                  <div className="text-lg">{item.description}</div>
-                </div>
+                <MenuGrid key={item.id} data={item} />
               ))}
             </div>
           </div>
