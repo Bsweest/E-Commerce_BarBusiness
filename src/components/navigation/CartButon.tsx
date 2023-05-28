@@ -1,8 +1,8 @@
 import { ObservableObject, observable } from '@legendapp/state';
 import { useSelector } from '@legendapp/state/react';
-import { useRouter } from 'next/router';
+import { NextRouter, useRouter } from 'next/router';
 import React from 'react';
-import { FcShop } from 'react-icons/fc';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 type CartItem = {
   itemID: number;
@@ -24,6 +24,11 @@ const GetCartFromLocalStorage = () => {
   }
 };
 
+const CreateOrder = (router: NextRouter) => {
+  localStorage.set('cart_list', []);
+  router.push('/thankyou');
+};
+
 const AddItemIdToCart = (id: number, quantity: number) => {
   const rs = listCart.list.filter((e) => e.itemID.get() === id);
   if (rs.length > 0) {
@@ -41,13 +46,15 @@ const RemoveItemFromCart = (id: number) => {
   listCart.list.set((prev) => prev.filter((e) => e.itemID !== id));
 };
 
+const ClearCart = () => {
+  listCart.list.set([]);
+};
+
 const CartButon = () => {
   const router = useRouter();
 
   const cartsCount = useSelector(() => {
     let rs = 0;
-    console.log(listCart.list.get());
-
     listCart.list.get().forEach((e) => {
       rs += e.count;
     });
@@ -68,7 +75,7 @@ const CartButon = () => {
         className="pointer-events-auto relative mr-8 mt-2 cursor-pointer"
         onClick={toPaymentPage}
       >
-        <FcShop size={35} className=" rounded-lg bg-gray-400" />
+        <AiOutlineShoppingCart size={35} className=" rounded-lg" />
         {cartsCount ? (
           <div className="absolute -bottom-5 -right-2 flex h-7 w-7 origin-top-left items-center justify-center rounded-full bg-red-500">
             {cartsCount}
@@ -81,6 +88,12 @@ const CartButon = () => {
   );
 };
 
-export { GetCartFromLocalStorage, AddItemIdToCart, RemoveItemFromCart };
+export {
+  GetCartFromLocalStorage,
+  AddItemIdToCart,
+  RemoveItemFromCart,
+  ClearCart,
+  CreateOrder,
+};
 
 export default CartButon;

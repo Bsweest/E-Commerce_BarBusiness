@@ -8,7 +8,7 @@ import { NextPageWithLayout } from './_app';
 const Home: NextPageWithLayout = () => {
   return (
     <div className="relative flex flex-1">
-      <div className="blackblur bg-cover bg-center" />
+      <div className="blackblur bg-[url('/asset/background.jpg')] bg-cover bg-center" />
 
       <div className="absolute flex h-full w-full flex-1 pt-9">
         <div className="flex flex-1 flex-col justify-between">

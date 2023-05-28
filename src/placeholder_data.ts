@@ -99,6 +99,182 @@ export const WineItem: ItemData[] = [
   },
 ];
 
-export const BartenderItem: ItemData[] = [];
+export const BartenderItem: ItemData[] = [
+  {
+    id: 11,
+    name: 'Đong rượu Jigger',
+    price: 200,
+    description:
+      'Jigger là một công cụ đo lường trong ngành nghề pha chế đồ uống, thường được sử dụng để đo lượng rượu, nước hoa quả, đường và các thành phần khác để tạo ra các loại cocktail hoặc đồ uống khác. Jigger thường có hình dạng hình nón và có các đường thước đo khác nhau trên hai đầu của nó để đo lượng chất lỏng khác nhau. Các đơn vị đo thông thường của jigger là ounce và ml. Jigger là một công cụ quan trọng giúp cho việc pha chế đồ uống được chính xác và đồng đều, giúp tăng tính thẩm mỹ và giá trị của đồ uống.',
+    url: '/asset/tools/jigger.jpg',
+    type: 2,
+  },
+  {
+    id: 12,
+    name: 'Bình Shaker',
+    price: 200,
+    description:
+      'Bình Shaker là một thiết bị được sử dụng trong phòng thí nghiệm để pha trộn các dung dịch hoặc hóa chất. Nó có đầu pha trộn được gắn trên nắp bình và có một động cơ bên trong để tạo ra chuyển động rung động để pha trộn các chất trong bình. Bình Shaker được sử dụng rộng rãi trong nhiều lĩnh vực như hóa học, sinh học, y học và thực phẩm. Nó có thể được điều chỉnh để pha trộn với tốc độ khác nhau và được sản xuất trong các kích cỡ và kiểu dáng khác nhau để phù hợp với các yêu cầu của người dùng.',
+    url: '/asset/tools/shaker.jpg',
+    type: 2,
+  },
+  {
+    id: 13,
+    name: 'Bình Shaker',
+    price: 200,
+    description: 'Hi',
+    url: '/asset/tools/jigger.jpg',
+    type: 2,
+  },
+  {
+    id: 14,
+    name: 'Muỗng Pha Chế',
+    price: 200,
+    description: 'Hi',
+    url: '/asset/tools/muong.jpg',
+    type: 2,
+  },
+  {
+    id: 15,
+    name: 'Ly Shot',
+    price: 200,
+    description: 'Hi',
+    url: '/asset/tools/lyshot.jpg',
+    type: 2,
+  },
+  {
+    id: 16,
+    name: 'Ly Thường',
+    price: 200,
+    description: 'Hi',
+    url: '/asset/tools/lythuong.jpg',
+    type: 2,
+  },
+];
 
-export const MenuBoard: ItemData[] = [];
+export const AllShopItem = WineItem.concat(BartenderItem);
+
+type MenuItem = {
+  id: number;
+  grid: number;
+  name: string;
+  description: string;
+  price: number;
+  level: number;
+};
+export const DrinkMenu: MenuItem[] = [
+  {
+    id: 1,
+    grid: 12,
+    name: 'Bloody Mary',
+    description:
+      'grey goose, cold pressed vegetables, fennel salt, fresh horseradish, pickles',
+    level: 15,
+    price: 150,
+  },
+  {
+    id: 2,
+    grid: 6,
+    name: 'Garibaldi',
+    description: 'campari & fluffy orange',
+    level: 15,
+    price: 150,
+  },
+  {
+    id: 3,
+    grid: 6,
+    name: 'Seasonal Bellini',
+    description: 'frutti di bosco puree, rosé, prosecco, rose water spray',
+    level: 17,
+    price: 150,
+  },
+  {
+    id: 4,
+    grid: 12,
+    name: 'Amalfi Limonata',
+    description:
+      'malfy lemon gin, limoncello, lemon curd, lemon juice, limonata soda',
+    level: 17,
+    price: 150,
+  },
+  {
+    id: 5,
+    grid: 6,
+    name: 'Oxacan Sunrise',
+    description: 'del maguey vida. fluffy orange. raspberry',
+    level: 14,
+    price: 150,
+  },
+  {
+    id: 6,
+    grid: 6,
+    name: 'Breakfast Martin',
+    description:
+      'brooklyn gin. cafe sicilia marmalade. dry curacao. fresh citrus',
+    level: 17,
+    price: 150,
+  },
+  {
+    id: 7,
+    grid: 12,
+    name: 'Salty Dog',
+    description:
+      'absolut. fluffy pink grapefruit. salted rosemary. black lava salt',
+    level: 15,
+    price: 150,
+  },
+];
+
+export const FoodMenu: MenuItem[] = [
+  {
+    id: -1,
+    grid: 12,
+    name: 'Bánh Croissant',
+    description: 'Ăn lúc vừa mới ra lò, cùng mứt dâu và được đánh bơ',
+    level: 0,
+    price: 120,
+  },
+  {
+    id: -2,
+    grid: 6,
+    name: 'Bánh Scone',
+    description: 'phục vụ kèm kem đông',
+    level: 0,
+    price: 120,
+  },
+  {
+    id: -3,
+    grid: 6,
+    name: 'Bánh Chuối Nhà Làm',
+    description: 'Nướng kèm mật ong',
+    level: 0,
+    price: 120,
+  },
+  {
+    id: -4,
+    grid: 6,
+    name: 'Hạt Hướng Dương',
+    description: 'Chỉ là hạt hướng dương thôi',
+    level: 0,
+    price: 30,
+  },
+  {
+    id: -4,
+    grid: 6,
+    name: 'Bánh Pancake',
+    description: 'Có quả mọng theo mùa, rưới thêm sữa chua cừu và syrup',
+    level: 0,
+    price: 150,
+  },
+];
+
+export const Table: ItemData[] = [
+  {
+    id: -1,
+    type: 3,
+    price: 200,
+    url: '',
+    name: 'Bàn 1',
+    description: '',
+  },
+];
