@@ -24,11 +24,6 @@ const GetCartFromLocalStorage = () => {
   }
 };
 
-const CreateOrder = (router: NextRouter) => {
-  localStorage.set('cart_list', []);
-  router.push('/thankyou');
-};
-
 const AddItemIdToCart = (id: number, quantity: number) => {
   const rs = listCart.list.filter((e) => e.itemID.get() === id);
   if (rs.length > 0) {
@@ -93,7 +88,6 @@ export {
   AddItemIdToCart,
   RemoveItemFromCart,
   ClearCart,
-  CreateOrder,
 };
 
 export default CartButon;

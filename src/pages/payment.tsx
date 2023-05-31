@@ -6,6 +6,7 @@ import MainLayout from '@/layouts/MainLayout';
 import { AllShopItem, ItemData } from '@/placeholder_data';
 import NumberFormat from '@/utils/PriceFormat';
 import { useSelector } from '@legendapp/state/react';
+import { useRouter } from 'next/router';
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 
 import { NextPageWithLayout } from './_app';

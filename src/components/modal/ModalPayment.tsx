@@ -5,8 +5,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { CreateOrder } from '../navigation/CartButon';
-
 type Props = {
   isShow: boolean;
   toggleModal: Function;
@@ -20,6 +18,11 @@ type Props = {
 const ModalPayment = ({ isShow, toggleModal, data }: Props) => {
   const router = useRouter();
   const { total, address, paymentMethod } = data;
+
+  const donePayment = () => {
+    localStorage.set('cart_list', JSON.stringify([]));
+    router.push('/thankyou');
+  };
 
   const PaymentRender = () => {
     switch (paymentMethod) {
@@ -63,7 +66,7 @@ const ModalPayment = ({ isShow, toggleModal, data }: Props) => {
               <div className="flex flex-1 justify-end">
                 <button
                   className="rounded-lg bg-green-700 py-1 px-4"
-                  onClick={() => CreateOrder(router)}
+                  onClick={donePayment}
                 >
                   Chấp nhận
                 </button>
