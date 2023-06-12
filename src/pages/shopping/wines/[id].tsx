@@ -34,6 +34,7 @@ const dict: { [key: string]: number } = {
   Whisky: 1,
   Cogna: 2,
   Vodka: 3,
+  Champagne: 4,
 };
 
 type Props = { items: ItemData[]; choosed: number };
@@ -104,6 +105,12 @@ const TypeOfWines: NextPageWithLayout<Props> = ({ items, choosed }) => {
                   isChoosed={choosed === 3}
                   isSmall={true}
                   onClick={() => router.push('/shopping/wines/Vodka')}
+                />
+                <ShopButton
+                  content="Champagne"
+                  isChoosed={choosed === 4}
+                  isSmall={true}
+                  onClick={() => router.push('/shopping/wines/Champagne')}
                 />
               </div>
               <ShopButton
