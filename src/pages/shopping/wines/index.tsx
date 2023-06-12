@@ -68,6 +68,12 @@ const Wines: NextPageWithLayout = () => {
                   isSmall={true}
                   onClick={() => router.push('/shopping/wines/Vodka')}
                 />
+                <ShopButton
+                  content="Champagne"
+                  isChoosed={false}
+                  isSmall={true}
+                  onClick={() => router.push('/shopping/wines/Champagne')}
+                />
               </div>
               <ShopButton
                 content="Dụng cụ"
