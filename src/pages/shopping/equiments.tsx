@@ -20,7 +20,9 @@ const Equiments: NextPageWithLayout = () => {
       return;
     }
 
-    const rs = originItems.filter((e) => e.name.includes(event.target.value));
+    const rs = originItems.filter((e) =>
+      e.name.toLowerCase().includes(event.target.value.toLowerCase()),
+    );
     setShopItem(rs);
   };
 
@@ -44,12 +46,12 @@ const Equiments: NextPageWithLayout = () => {
             <div className="flex w-72 flex-col gap-3 px-5">
               <ShopButton
                 content="Rượu nền"
-                isChoosed={true}
-                onClick={() => router.push('/shopping/equiments')}
+                isChoosed={false}
+                onClick={() => router.push('/shopping/wines')}
               />
               <ShopButton
                 content="Dụng cụ"
-                isChoosed={false}
+                isChoosed={true}
                 onClick={() => {}}
               />
             </div>

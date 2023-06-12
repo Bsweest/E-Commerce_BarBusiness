@@ -57,7 +57,9 @@ const TypeOfWines: NextPageWithLayout<Props> = ({ items, choosed }) => {
       return;
     }
 
-    const rs = originItems.filter((e) => e.name.includes(event.target.value));
+    const rs = originItems.filter((e) =>
+      e.name.toLowerCase().includes(event.target.value.toLowerCase()),
+    );
     setShopItem(rs);
   };
 
