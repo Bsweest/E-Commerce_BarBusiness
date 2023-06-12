@@ -1,4 +1,3 @@
-import { AddItemIdToCart } from '@/components/navigation/CartButon';
 import MainLayout from '@/layouts/MainLayout';
 import { ItemData, Table } from '@/placeholder_data';
 import GetFullDateTime from '@/utils/GetFullDateTime';

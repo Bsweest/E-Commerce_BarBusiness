@@ -1,34 +1,26 @@
 import ShopItem from '@/components/listitem/ShopItem';
 import ShopButton from '@/components/navigation/ShopButton';
 import MainLayout from '@/layouts/MainLayout';
-import {
-  AllShopItem,
-  BartenderItem,
-  ItemData,
-  WineItem,
-} from '@/placeholder_data';
+import { BartenderItem, ItemData } from '@/placeholder_data';
 import { AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import React, { ChangeEvent, ReactElement, useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
 import { NextPageWithLayout } from '../_app';
 
-const Shopping: NextPageWithLayout = () => {
-  const [shopItem, setShopItem] = useState<ItemData[]>(WineItem);
-  const [tab, setTab] = useState<number>(1);
-
-  const ChooseTab = (value: number, items: ItemData[]) => {
-    setTab(value);
-    setShopItem(items);
-  };
+const Equiments: NextPageWithLayout = () => {
+  const router = useRouter();
+  const originItems = BartenderItem;
+  const [shopItem, setShopItem] = useState<ItemData[]>(originItems);
 
   const onFindChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value === '') {
-      setShopItem(tab === 1 ? WineItem : BartenderItem);
+      setShopItem(originItems);
       return;
     }
 
-    const rs = AllShopItem.filter((e) => e.name.includes(event.target.value));
+    const rs = originItems.filter((e) => e.name.includes(event.target.value));
     setShopItem(rs);
   };
 
@@ -52,13 +44,13 @@ const Shopping: NextPageWithLayout = () => {
             <div className="flex w-72 flex-col gap-3 px-5">
               <ShopButton
                 content="Rượu nền"
-                isChoosed={tab === 1}
-                onClick={() => ChooseTab(1, WineItem)}
+                isChoosed={true}
+                onClick={() => router.push('/shopping/equiments')}
               />
               <ShopButton
                 content="Dụng cụ"
-                isChoosed={tab === 2}
-                onClick={() => ChooseTab(2, BartenderItem)}
+                isChoosed={false}
+                onClick={() => {}}
               />
             </div>
             <div
@@ -76,8 +68,8 @@ const Shopping: NextPageWithLayout = () => {
   );
 };
 
-Shopping.getLayout = function getLayout(page: ReactElement) {
+Equiments.getLayout = function getLayout(page: ReactElement) {
   return <MainLayout>{page}</MainLayout>;
 };
 
-export default Shopping;
+export default Equiments;

@@ -39,7 +39,7 @@ export default function MainLayout({ children }: layoutProps) {
     >
       <Header />
       <main
-        className={`relative flex h-screen w-screen ${cabin.variable} ${advent.variable}`}
+        className={`relative flex h-screen w-screen bg-black text-white ${cabin.variable} ${advent.variable}`}
       >
         {children}
         <div className="absolute flex w-screen flex-1 flex-col items-center bg-transparent">

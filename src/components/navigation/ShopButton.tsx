@@ -5,12 +5,20 @@ type ShopButtonType = {
   content: string;
   isChoosed: boolean;
   onClick: Function;
+  isSmall?: boolean;
 };
 
-const ShopButton = ({ content, isChoosed, onClick }: ShopButtonType) => {
+const ShopButton = ({
+  content,
+  isChoosed,
+  onClick,
+  isSmall = false,
+}: ShopButtonType) => {
   return (
     <div
-      className="group relative flex h-10 cursor-pointer"
+      className={`group relative flex cursor-pointer ${
+        isSmall ? 'h-8 text-sm' : 'h-10'
+      }`}
       onClick={() => onClick()}
     >
       <div className="h-full w-full border-2 border-red-300" />

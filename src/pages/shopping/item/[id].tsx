@@ -8,7 +8,7 @@ import { ParsedUrlQuery } from 'querystring';
 import { ChangeEvent, ReactElement, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-import { NextPageWithLayout } from '../_app';
+import { NextPageWithLayout } from '../../_app';
 
 export async function getServerSideProps({
   query,

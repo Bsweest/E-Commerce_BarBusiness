@@ -10,14 +10,18 @@ type Props = {
 
 const ShopItem = ({ data }: Props) => {
   return (
-    <div className="mb-3 flex h-fit flex-col items-center justify-center">
+    <div className="mb-3 flex h-fit flex-col items-center justify-center ">
       <Link
-        href={`/shopping/${data.name}`}
-        className="flex cursor-pointer flex-col items-center bg-neutral-900 p-2"
-        // onClick={goToDetail}
+        href={`/shopping/item/${data.name}`}
+        className="flex cursor-pointer flex-col items-center p-2"
       >
         <div className="relative m-2 h-52 w-52 overflow-clip">
-          <Image src={data.url} alt="wine" fill className="hover:scale-125" />
+          <Image
+            src={data.url}
+            alt="wine"
+            fill
+            className="hover:scale-125 hover:opacity-60"
+          />
         </div>
         <div className="flex w-full text-orange-200">
           <div className={`mx-3 font-advent text-xl`}>{data.name}</div>
