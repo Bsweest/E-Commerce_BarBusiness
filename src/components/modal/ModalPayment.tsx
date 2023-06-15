@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import { ClearCart } from '../navigation/CartButon';
+
 type Props = {
   isShow: boolean;
   toggleModal: Function;
@@ -20,7 +22,7 @@ const ModalPayment = ({ isShow, toggleModal, data }: Props) => {
   const { total, address, paymentMethod } = data;
 
   const donePayment = () => {
-    localStorage.set('cart_list', JSON.stringify([]));
+    ClearCart();
     router.push('/thankyou');
   };
 

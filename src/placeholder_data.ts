@@ -6,13 +6,14 @@ export type ItemData = {
   url: string;
   type: number;
   type_of_wine?: string;
+  link_shopee?: string;
 };
 
 export const WineItem: ItemData[] = [
   {
     id: 1,
     name: 'Chivas 21 Năm Royal Salute',
-    price: 2500,
+    price: 800,
     description:
       'Chivas 21 Royal Salute được dân sành rượu thế giới biết đến như một trong những loại Whisky Scotch thượng hạng nhất, được pha trộn và ủ trong những thùng gỗ sồi đặc trưng trong suốt 21 năm. Với bàn tay tài hoa của những người nghệ nhân gốm sứ, mẫu chai Chivas 21 được hoàn thiện với vẻ đẹp trường tồn và bất tử. Cho đến nay, đây vẫn là siêu phẩm Whisky hảo hạng, tôn vinh giá trị nhà Chivas Regal và xứng đáng có mặt trong bất cứ bộ sưu tập rượu ngoại nào.',
     url: '/asset/wine/chivas-21-nam-royal-salute-190.jpg',
@@ -32,7 +33,7 @@ export const WineItem: ItemData[] = [
   {
     id: 3,
     name: 'Johnnie Walker Blue Year Of Dog Chó F18',
-    price: 4200,
+    price: 700,
     description:
       'RƯỢU JOHNNIE WALKER BLUE LABEL - YEAR OF DOG - TẾT MẬU TUẤT 2018 \n' +
       'JOHNNIE WALKER® BLUE LABEL™ là tuyệt phẩm với chất lượng không gì sánh bằng được. Chất rượu được chế tác từ những dòng Whisky quý hiếm với chất lượng vượt bậc. Chỉ 1 trong 10,000 thùng gỗ sồi mới đạt đủ phẩm chất để tạo nên hương vị tinh túy đặc trưng cho JOHNNIE WALKER® BLUE LABEL™ - Tuyệt phẩm quý hiếm dành cho những đêm tiệc đẳng cấp.\n' +
@@ -46,7 +47,7 @@ export const WineItem: ItemData[] = [
   {
     id: 4,
     name: 'Glenfiddich 15 Năm - Hộp Quà Tết 2022',
-    price: 1800,
+    price: 500,
     description:
       'Phiên bản Glenfiddich 15 Năm hộp quà Tết 2022 được ra đời dựa trên thị hiếu của người tiêu dùng trong dịp lễ Tết, đặc biệt là Tết Nguyên đán 2022. Loại rượu Single Malt Scotch Whisky ngọt dịu, ấm áp được đặt trong hộp giấy sang trọng là món quà lý tưởng để biếu tặng cấp trên, người thân.',
     url: '/asset/wine/Glenfiddich-15-nam-01.jpg',
@@ -56,7 +57,7 @@ export const WineItem: ItemData[] = [
   {
     id: 5,
     name: 'Macallan Quest 1L Hộp Đỏ 2021',
-    price: 2000,
+    price: 800,
     description:
       'Vốn đã nổi danh với những chai rượu tuyệt đỉnh, thương hiệu Macallan còn cho ra đời dòng Macallan Quest hộp đỏ 2021 hảo hạng đốn gục giới sành rượu. Từ thiết kế hộp đến màu sắc, hương vị của rượu đều khiến bất cứ ai từng thử qua đều phải nghiêng mình thán phục. Hãy cùng khám phá ngay dòng Macallan Quest hộp đỏ này xem nó đặc biệt như thế nào nhé! \n' +
       'Macallan Quest 1L 2021 là phiên bản mới nhất của chai rượu cùng tên, thuộc dòng Macallan Quest. Rượu được ủ trong 4 loại thùng gỗ sồi riêng biệt từ châu Âu, Mỹ,... Sự hoà lẫn của nó tạo nên loại Whisky mạch nha đơn có hương vị đầy tươi mới, đặc trưng của hương gỗ sồi cay, vani dịu ngọt cùng trái cây chua. Chính sự trộn lẫn đầy độc đáo này đã làm nên dòng rượu hảo hạng nổi danh khắp thế giới.',
@@ -67,7 +68,7 @@ export const WineItem: ItemData[] = [
   {
     id: 6,
     name: 'Hennessy VSOP Holidays - Hộp Quà Tết 2023',
-    price: 1600,
+    price: 900,
     description:
       'Hennessy VSOP Holidays 2023 nằm trong bộ sưu tập Tết của thương hiệu Cognac trứ danh của nước Pháp. Phiên bản này sở hữu vẻ ngoài bắt mắt với sắc đỏ rực rỡ. Cùng với đó là hương vị Cognac thơm ngon tràn ngập vị trái cây, mật ong và gỗ sồi. Đây sẽ là món quà Tết thể hiện được trọn vẹn thành ý của bạn dành cho người nhận. \n' +
       'Phiên bản này sử dụng chai đựng thủy tinh cao cấp với thiết kế lạ mắt, thuôn gọn dần về cổ chai. Logo của thương hiệu được khắc nổi trên thân chai giúp người tiêu dùng dễ dàng nhận diện sản phẩm của Hennessy. Từ nắp chai, nhãn mác đến hộp đựng đều sử dụng sắc đỏ rực rỡ. Theo văn hóa phương Đông, màu đỏ là tượng trưng cho sự may mắn, tốt lành và hạnh phúc nên mọi người thường lựa chọn quần áo, đồ trang trí màu đỏ trong dịp Tết. Hiểu được ý nghĩa đó, Hennessy đã lựa chọn màu sắc này trong phiên bản Hennessy VSOP Holidays 2023 với mong muốn người sở hữu nó luôn gặp may mắn, bình an trong cuộc sống.',
@@ -78,7 +79,7 @@ export const WineItem: ItemData[] = [
   {
     id: 7,
     name: 'Martell Cordon Bleu - Tết 2023',
-    price: 1500,
+    price: 900,
     description:
       'Kể từ lúc được sáng tạo bởi Edouard Martell vào năm 1912, Cordon Bleuđã trở thành 1 huyền thoại thực sự. Hương vị của loại rượu này được đánh giá trội hơn hẳn các loại khác trong vùng Borderies, với việc giữ lại sự thiết kế của vỏ chai kể từ lúc được sáng tạo ra, Cordon Bleu mang dáng vẻ cổ điển giữa những loại Cognac danh tiếng khác. Là loại Cognac dành cho những người sành điệu.',
     url: '/asset/wine/martell-cordonblue-1.jpg',
@@ -88,7 +89,7 @@ export const WineItem: ItemData[] = [
   {
     id: 8,
     name: 'Remy Martin 1738 - Hộp Quà Tết 2023',
-    price: 2300,
+    price: 900,
     description:
       'Bạn có biết năm 1738 - năm đánh dấu một trong những sự kiện làm thay đổi hoàn toàn lịch sử của rượu? Chính vào năm này, vua Louis đã ban cho nhà Remy một đặc ân được mở rộng vườn nho của mà mình để tiến hành ủ rượu. Remy Martin 1738 đã được đặt tên nhằm tôn vinh vinh dự mà nhà Remy nhận được từ Hoàng gia của vua Louis XV. \n' +
       'Từ đó rượu Remy Martin 1738 dần dần bắt rễ sâu vào trong lãnh thổ và truyền thống của nhà nhà Remy Martin. Remy Martin 1738 2023 được chế tác với tỉ lệ cao và vô cùng đặc biệt “eaux-de-vie” lâu năm cho ra thành phẩm là hương vị phong phú và mạnh mẽ chưa từng có. \n' +
@@ -110,7 +111,7 @@ export const WineItem: ItemData[] = [
   {
     id: 10,
     name: 'Remy Martin VSOP Limited - Hộp Quà Tết 2022',
-    price: 1550,
+    price: 650,
     description:
       'Remy Martin VSOP Limited hộp quà Tết 2022 đang được nhiều khách hàng của Rượu Tây Chính Hãng đặt mua để làm quà tặng cho đối tác, người thân trong dịp Tết 2022. Hộp quà cao cấp, sang trọng không những thể hiện sự chu đáo của người tặng mà còn mang ý nghĩa chúc năm mới ngập tràn may mắn, thành công.',
     url: '/asset/wine/remymartin2022-1.jpg',
@@ -120,7 +121,7 @@ export const WineItem: ItemData[] = [
   {
     id: 11,
     name: 'Martell Cordon Bleu Intense Heat Cask Finish',
-    price: 4900,
+    price: 900,
     description:
       'Martell Cordon Blue đã được sáng tạo bởi Edouard Martell, cháu cố của nhà sáng lập vào năm 1912. Được đặt tên sau bãi ruy băng xanh dương, biểu tượng quốc tế của sự xuất sắc, Martell Cordon Blue là hiện thân của sự thhanh lịch và phức hợp hương vị. \n' +
       'Luôn được chú ý vì sự dày dặn, sang trọng và tinh tế, Martell Cordon Blue được phối trộn từ hơn 100 loại rượu tâm, mà trong đó, những hương vị đầy hương hoa đến từ những dòng rượu tâm cao quí vùng Borderies.',
@@ -131,7 +132,7 @@ export const WineItem: ItemData[] = [
   {
     id: 12,
     name: 'Absolut Elyx',
-    price: 1500,
+    price: 400,
     description:
       'Absolut Elyx mang danh là dòng vodka được chế tác thủ công (handcraft vodka), thừa hưởng và nắm bắt mọi sự tinh túy trong di sản của nền sản xuất vodka lò Absolut. \n' +
       'Rượu được chưng cất từ những lò nấu bằng đồng có từ 1929, và được vận hành hoàn toàn bằng tay từ chỉ rất ít người có sự am hiểu kiến thức, kỹ thuật và sự lành nghề được thừa hưởng qua nhiều thế hệ sản xuất vodka.',
@@ -184,7 +185,7 @@ export const WineItem: ItemData[] = [
   {
     id: 17,
     name: "Penfolds Max's Shiraz 2020",
-    price: 1150,
+    price: 450,
     description: "Penfolds Max's Shiraz 2020",
     url: '/asset/wine/ee90478f8a53466088bad90745b4e46e.jpg',
     type: 1,
@@ -201,6 +202,8 @@ export const BartenderItem: ItemData[] = [
       'Jigger là một công cụ đo lường trong ngành nghề pha chế đồ uống, thường được sử dụng để đo lượng rượu, nước hoa quả, đường và các thành phần khác để tạo ra các loại cocktail hoặc đồ uống khác. Jigger thường có hình dạng hình nón và có các đường thước đo khác nhau trên hai đầu của nó để đo lượng chất lỏng khác nhau. Các đơn vị đo thông thường của jigger là ounce và ml. Jigger là một công cụ quan trọng giúp cho việc pha chế đồ uống được chính xác và đồng đều, giúp tăng tính thẩm mỹ và giá trị của đồ uống.',
     url: '/asset/tools/jigger.jpg',
     type: 2,
+    link_shopee:
+      'https://shopee.vn/JIGGER-inox-2-đầu-dụng-cụ-đo-lường-dung-tích-i.754515614.22345320395',
   },
   {
     id: -2,
@@ -210,6 +213,7 @@ export const BartenderItem: ItemData[] = [
       'Bình Shaker là một thiết bị được sử dụng trong phòng thí nghiệm để pha trộn các dung dịch hoặc hóa chất. Nó có đầu pha trộn được gắn trên nắp bình và có một động cơ bên trong để tạo ra chuyển động rung động để pha trộn các chất trong bình. Bình Shaker được sử dụng rộng rãi trong nhiều lĩnh vực như hóa học, sinh học, y học và thực phẩm. Nó có thể được điều chỉnh để pha trộn với tốc độ khác nhau và được sản xuất trong các kích cỡ và kiểu dáng khác nhau để phù hợp với các yêu cầu của người dùng.',
     url: '/asset/tools/shaker.jpg',
     type: 2,
+    link_shopee: 'https://shopee.vn/STANDARD-SHAKER-i.754515614.21689734829',
   },
   {
     id: -3,
@@ -218,6 +222,8 @@ export const BartenderItem: ItemData[] = [
     description: 'Hi',
     url: '/asset/tools/muong.jpg',
     type: 2,
+    link_shopee:
+      'https://shopee.vn/BAR-SPOON-Muỗng-khuấy-cocktail-i.754515614.20780834530',
   },
   {
     id: -4,
@@ -234,6 +240,8 @@ export const BartenderItem: ItemData[] = [
     description: 'Hi',
     url: '/asset/tools/lythuong.jpg',
     type: 2,
+    link_shopee:
+      'https://shopee.vn/Ly-chân-cao-Stemmed-glass-i.754515614.22270858041',
   },
 ];
 

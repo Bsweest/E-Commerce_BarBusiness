@@ -4,6 +4,7 @@ import { AllShopItem, ItemData } from '@/placeholder_data';
 import NumberFormat from '@/utils/PriceFormat';
 import { NextApiRequest, NextApiResponse } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ParsedUrlQuery } from 'querystring';
 import { ChangeEvent, ReactElement, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
@@ -65,6 +66,21 @@ const ShopItemDetailPage: NextPageWithLayout<Props> = ({ data }) => {
             >
               Đặt Hàng
             </button>
+            <Link
+              className={`mt-8 h-auto w-fit rounded-lg px-5 py-2 font-advent text-lg ${
+                data.link_shopee ? 'bg-orange-500' : 'bg-gray-600'
+              }`}
+              target="_blank"
+              href={
+                data.link_shopee
+                  ? data.link_shopee
+                  : 'https://shopee.vn/hoangphuongg268'
+              }
+            >
+              {data.link_shopee
+                ? 'Link to product on Shopee'
+                : 'Sản phẩm chưa có trên Shopee (Đến Shop)'}
+            </Link>
           </div>
           <div
             style={{ borderWidth: '1px' }}
